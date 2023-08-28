@@ -137,7 +137,7 @@ export default function Shorten() {
           {info}
         </div>
       )}
-      <h1 className="text-3xl font-bold text-gray-700  mb-8">Shorten a URL</h1>
+      <h1 className="text-3xl font-bold text-gray-700  mb-8">短链接</h1>
       <form
         className="w-full max-w-lg p-4 bg-white rounded-lg shadow-md"
         onSubmit={handleShortenRequest}
@@ -147,7 +147,7 @@ export default function Shorten() {
             htmlFor="longUrl"
             className="block text-gray-700 font-bold mb-2"
           >
-            Long URL
+            需要缩短的链接
           </label>
           <div className="relative flex items-center">
             <input
@@ -179,7 +179,7 @@ export default function Shorten() {
               htmlFor="shortUrl"
               className="block text-gray-700 font-bold mb-2"
             >
-              Short URL Output
+              缩短后的链接
             </label>
             <div className="relative flex items-center">
               <input
@@ -220,7 +220,7 @@ export default function Shorten() {
               setAdvancedSettingsVisible(!advancedSettingsVisible);
             }}
           >
-            {advancedSettingsVisible ? "Hide" : "Advanced Settings"}
+            {advancedSettingsVisible ? "隐藏" : "高级设置"}
           </a>
           {advancedSettingsVisible && (
             <div className="pl-8">
@@ -229,7 +229,7 @@ export default function Shorten() {
                   htmlFor="shortUrlLength"
                   className="block text-gray-700 font-bold mb-2"
                 >
-                  Short URL length
+                  短链接长度
                 </label>
                 <input
                   type="number"
@@ -255,7 +255,7 @@ export default function Shorten() {
                   onChange={(event) => setRequirePassword(event.target.checked)}
                 />
                 <label htmlFor="requirePassword" className="text-gray-700">
-                  Require Password Authentication
+                  开启密码认证
                 </label>
               </div>
               {requirePassword && (
@@ -264,7 +264,7 @@ export default function Shorten() {
                     htmlFor="password"
                     className="block text-gray-700 font-bold mb-2"
                   >
-                    Password
+                    访问密码
                   </label>
                   <input
                     type="text"
@@ -281,7 +281,7 @@ export default function Shorten() {
                   htmlFor="expirationTime"
                   className="block text-gray-700 font-bold mb-2"
                 >
-                  Expiration Time
+                  短链接过期时间
                 </label>
                 <input
                   type="number"
@@ -297,7 +297,7 @@ export default function Shorten() {
                   }
                 />
                 <span className="text-gray-500 ml-2">
-                  minutes (0 means never expires)
+                  分钟 (0 为始终不过期)
                 </span>
               </div>
             </div>

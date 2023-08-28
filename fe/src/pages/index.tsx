@@ -49,7 +49,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <ForkMeBadge />
       <h1 className="text-3xl font-bold mb-8" style={{ color: "black" }}>
-        EastLake Short Url System Login
+          短链接系统登录
       </h1>
       <form
         className="w-full max-w-lg p-4 bg-white rounded-lg shadow-md"
@@ -60,7 +60,7 @@ export default function Home() {
             htmlFor="username"
             className="block text-gray-700 font-bold mb-2"
           >
-            Username
+            用户名
           </label>
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function Home() {
             htmlFor="password"
             className="block text-gray-700 font-bold mb-2"
           >
-            Password
+            密码
           </label>
           <div className="relative flex items-center">
             <input

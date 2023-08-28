@@ -91,22 +91,22 @@ export default function ShortUrlList({ shortUrls, setReloadShortUrls }) {
 
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-bold text-black mb-2">Short URL List</h2>
+      <h2 className="text-xl font-bold text-black mb-2">短链接列表</h2>
       {shortUrls && shortUrls.length > 0 ? (
         <div className="w-full max-h-64 overflow-auto">
           <table className="table-auto w-full">
             <thead>
               <tr>
-                <th className="px-4 text-black py-2 text-center">Short URL</th>
+                <th className="px-4 text-black py-2 text-center">短链接</th>
                 <th className="px-4 text-black py-2 text-center">
-                  Origin Long URL
+                  原链接
                 </th>
                 <th className="px-4 text-black py-2 text-center">
-                  Expiration Time
+                  过期时间
                 </th>
-                <th className="px-4 text-black py-2 text-center">Password</th>
-                <th className="px-4 text-black py-2 text-center">Clicks</th>
-                <th className="px-4 text-black py-2 text-center">Actions</th>
+                <th className="px-4 text-black py-2 text-center">密码</th>
+                <th className="px-4 text-black py-2 text-center">点击数</th>
+                <th className="px-4 text-black py-2 text-center">操作</th>
               </tr>
             </thead>
             <tbody>

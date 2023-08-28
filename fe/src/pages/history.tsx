@@ -136,13 +136,13 @@ export default function ClickHistory() {
     <div className="mt-8 flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <ForkMeBadge />{" "}
       <h1 className="text-3xl font-bold text-gray-700 mb-8">
-        Click History for {baseURL}/{shortUrl}
+        {baseURL}/{shortUrl} 的点击数据
       </h1>
       <div className="w-full max-w-lg p-4 bg-white rounded-lg shadow-md">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
             <label htmlFor="timeRange" className="text-gray-700 font-bold mr-2">
-              Time Range:
+              时间范围:
             </label>
             <select
               id="timeRange"
@@ -150,23 +150,23 @@ export default function ClickHistory() {
               onChange={handleTimeRangeChange}
               className="border border-gray-300 rounded p-2 text-black"
             >
-              <option value="day">Day</option>
-              <option value="month">Month</option>
-              <option value="year">Year</option>
+              <option value="day">天</option>
+              <option value="month">月</option>
+              <option value="year">年</option>
             </select>
           </div>
           <button
             onClick={goBack}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Back
+            返回
           </button>
         </div>
         {Object.keys(currentOption).length > 0 ? (
           <ReactECharts option={currentOption} style={{ height: "400px" }} />
         ) : (
           <div className="text-center text-gray-500 text-xl">
-            No click history found
+            暂时没有点击数据
           </div>
         )}
       </div>
